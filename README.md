@@ -1,13 +1,14 @@
 
-# `sysopctl` Command Documentation
+# `sysopctl` TOOL GUIDE
 
 **Version:** v0.1.0
 
 ## Introduction
-`sysopctl` is a command-line tool designed for managing various system operations. It provides users with an easy-to-use interface for interacting with system services, monitoring processes, analyzing logs, and performing system backups. This tool aims to simplify common system administration tasks, offering functionality similar to other Linux commands like `systemctl`, `uptime`, `df`, `top`, `journalctl`, and `rsync`.
 
-## Usage
-All commands follow the general syntax:
+`sysopctl` is a versatile command-line utility built to streamline system management tasks. It offers a user-friendly interface that helps administrators handle essential operations such as managing system services, tracking and analyzing system processes, reviewing logs, and performing backups. By combining features found in tools like `systemctl`, `uptime`, `df`, `top`, `journalctl`, and `rsync`, sysopctl consolidates several system administration functions into a single, efficient tool, making it easier to perform routine tasks with minimal effort.
+
+## How To Use
+Each command in sysopctl follows this structure:
 
 ```
 sysopctl <command> [options]
@@ -17,16 +18,16 @@ sysopctl <command> [options]
 
 ### Basic Commands
 
-#### 1. Manual Page
-To access the full documentation through the manual:
+#### 1. View Manual 
+To view the complete documentation using the manual page:
 
 ```
 man sysopctl
 ```
 ![man](https://github.com/user-attachments/assets/493127b3-aa9c-4b61-bb18-4579456ac8c1)
 
-#### 2. Help Option
-To display usage information and examples:
+#### 2. Help Menu
+To display a list of commands and examples for using sysopctl:
 
 ```
 sysopctl --help
@@ -35,7 +36,7 @@ sysopctl --help
 
 
 #### 3. Version Information
-To display the current version of the `sysopctl` command:
+To check which version of `sysopctl` you have installed:
 
 ```
 sysopctl --version
@@ -43,12 +44,12 @@ sysopctl --version
 ![version](https://github.com/user-attachments/assets/4360be1a-e911-4b5a-bc73-d1bc62518db7)
 
 
-### System Management Operations
+### System Management Commands
 
-#### Part 1: Easy Level
+#### Part 1: Beginner Level Operation
 
-##### 1. List Running Services
-Lists all active services on the system, similar to `systemctl list-units --type=service`.
+##### 1. List Active Services
+Retrieve a list of currently running services, similar to `systemctl list-units --type=service`.
 
 **Command:**
 ```
@@ -57,8 +58,8 @@ sysopctl service list
 ![service list](https://github.com/user-attachments/assets/dde93664-0526-41e7-a6d1-486a1701b9f6)
 
 
-##### 2. View System Load
-Displays the current system load averages, similar to the output from the `uptime` command.
+##### 2. Check System Load
+Shows the system's load averages, similar to what `uptime` displays.
 
 **Command:**
 ```
@@ -69,8 +70,8 @@ sysopctl system load
 
 #### Part 2: Intermediate Level
 
-##### 1. Manage System Services
-Starts or stops a specific service, akin to using `systemctl start/stop`.
+##### 1. Service Management
+Starts or stops a specific service, comparable to  `systemctl start/stop`.
 
 
 **Start a Service:**
@@ -86,7 +87,7 @@ sysopctl service stop <service-name>
 
 
 ##### 2. Check Disk Usage
-Displays disk usage statistics by partition, similar to `df -h`.
+View the disk usage of mounted partitions, similar to `df -h`.
 
 **Command:**
 ```
@@ -98,7 +99,7 @@ sysopctl disk usage
 #### Part 3: Advanced Level
 
 ##### 1. Monitor System Processes
-Monitors real-time process activity, similar to the `top` or `htop` commands.
+Track Real Time Activity, similar to using `top` or `htop`.
 
 **Command:**
 ```
@@ -108,8 +109,8 @@ sysopctl process monitor
 
 
 
-##### 2. Analyze System Logs
-Analyzes and summarizes recent critical log entries, utilizing tools like `journalctl`.
+##### 2. Log Analysis
+Review and summarize important recent logs, much like `journalctl`.
 
 **Command:**
 ```
@@ -118,8 +119,8 @@ sysopctl logs analyse
 ![logs](https://github.com/user-attachments/assets/00e00828-f457-498f-9281-8dd1aff30db8)
 
 
-##### 3. Backup System Files
-Initiates a backup of specified files or directories, potentially using `rsync` for file transfers.
+##### 3. Backup System Data
+Backup designated files or directories using a command similar to `rsync`.
 
 **Command:**
 ```
